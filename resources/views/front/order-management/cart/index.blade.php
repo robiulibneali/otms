@@ -110,7 +110,7 @@
                                         <li class="cart-total"><strong>Total:</strong> <span>BDT {{ $total }}</span></li>
                                     </ul>
                                     <div class="text-end mt-40">
-                                        <a href="#" class="theme-btn">Checkout Now <i class="far fa-arrow-right"></i></a>
+                                        <a href="{{ route('front.order-checkout') }}" class="theme-btn">Checkout Now <i class="far fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
