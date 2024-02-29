@@ -9,8 +9,7 @@ use App\Http\Controllers\Admin\BlogModule\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogModule\BlogController;
 
 use App\Http\Controllers\Admin\UserModule\UserController;
-use App\Http\Controllers\Admin\UserModule\RoleController;
-
+use App\Http\Controllers\Admin\Order\OrderController;
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -28,7 +27,8 @@ Route::middleware([
             'blogs'             => BlogController::class,
 
             'users'             => UserController::class,
-            'roles'             => RoleController::class,
         ]);
+
+        Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     });
 });

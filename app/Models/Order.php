@@ -35,4 +35,9 @@ class Order extends Model
         self::$order->save();
         return self::$order;
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
