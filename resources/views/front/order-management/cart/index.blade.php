@@ -53,11 +53,11 @@
                                 <tr>
                                     <td>
                                         <div class="cart-img">
-{{--                                            @if($cartItem['image'])--}}
-{{--                                                <img src="{{ asset($cartItem['image']) }}" alt="" style="height: 70px; width: 100px;"/>--}}
-{{--                                            @else--}}
+                                            @if($cartItem['attributes']['image'])
+                                                <img src="{{ asset($cartItem['attributes']['image']) }}" alt="" style="height: 70px; width: 100px;"/>
+                                            @else
                                                 <img src="{{ asset('front/assets/img/course/01.jpg') }}" alt="" />
-{{--                                            @endif--}}
+                                            @endif
                                         </div>
                                     </td>
                                     <td>
