@@ -43,7 +43,7 @@
                                         {{ $order->status == 2 ? 'Cancel' : '' }}
                                     </td>
                                     <td class="d-flex">
-                                        <a href="{{ route('admin.blog-categories.edit', $order->id) }}" class="btn btn-sm btn-secondary ms-1"><i class="fa fa-edit"></i></a>
+                                        <a href="{{ route('admin.orders.change-status', ['order_id' => $order->id]) }}" class="btn btn-sm btn-secondary ms-1"><i class="fa fa-edit"></i></a>
                                     </td>
                                 </tr>
                             @endforeach

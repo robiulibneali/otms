@@ -30,5 +30,7 @@ Route::middleware([
         ]);
 
         Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+        Route::get('/change-status-page/{order_id}', [OrderController::class, 'changeStatusPage'])->name('orders.change-status');
+        Route::post('/update-order-status/{order_id}', [OrderController::class, 'updateOrderStatus'])->name('orders.update-status');
     });
 });
