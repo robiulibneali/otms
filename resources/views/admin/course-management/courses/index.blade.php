@@ -18,8 +18,7 @@
                                 <td>Category Name</td>
                                 <td>Teacher Name</td>
                                 <td>Title</td>
-                                <td>Short Des</td>
-                                <td>Long Des</td>
+                                <td>Description</td>
                                 <td>Price</td>
                                 <td>Information</td>
                                 <td>Image</td>
@@ -33,10 +32,12 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $course->courseCategory->name }}</td>
                                     <td>{{ $course->user->name }}</td>
-                                    <td><a href="">{{ $course->title }}</a></td>
-                                    <td><a href="">{{ str()->words(strip_tags($course->short_description), 10, '...') }}</a></td>
-                                    <td><a href="">{!! str()->words(strip_tags($course->long_description), 15, '...') !!}</a></td>
-                                    <td><a href="">{{ $course->price }}</a></td>
+                                    <td><a href="{{ route('admin.course-contents.index', ['course_id' => $course->id]) }}">{{ $course->title }}</a></td>
+                                    <td>
+                                        <p><b>Short Description:</b> {{ str()->words(strip_tags($course->short_description), 10, '...') }}</p>
+                                        <p><b>Long Description:</b> {{ str()->words(strip_tags($course->long_description), 15, '...') }}</p>
+                                    </td>
+                                    <td>{{ $course->price }}</td>
                                     <td>
                                         <p>Starting Date: {{ $course->starting_date }}</p>
                                         <p>Total Duration: {{ $course->total_duration }}</p>

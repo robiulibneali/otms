@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\AdminController;
 
@@ -10,6 +11,8 @@ use App\Http\Controllers\Admin\BlogModule\BlogController;
 
 use App\Http\Controllers\Admin\UserModule\UserController;
 use App\Http\Controllers\Admin\Order\OrderController;
+use App\Http\Controllers\Admin\CoursesModule\CourseContentController;
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -21,6 +24,7 @@ Route::middleware([
 
         Route::resources([
             'course-categories' => CourseCategoryController::class,
+            'course-contents'   => CourseContentController::class,
             'courses'           => CourseController::class,
 
             'blog-categories'   => BlogCategoryController::class,

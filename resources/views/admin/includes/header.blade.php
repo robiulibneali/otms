@@ -55,7 +55,7 @@
                             <div class="dropdown d-md-flex profile-1">
                                 <a href="#" data-bs-toggle="dropdown" class="nav-link pe-2 leading-none d-flex animate">
 												<span>
-													<img src="{{ !empty(auth()->user()->profile_photo_path) ? auth()->user()->profile_photo_path : 'https://media1.tenor.com/m/ZCBhUd5aCo8AAAAd/tom-and-jerry-tom.gif' }}" alt="profile-user"
+													<img src="{{ !empty(auth()->user()->profile_photo_path) ? auth()->user()->profile_photo_path : 'https://w7.pngwing.com/pngs/722/101/png-transparent-computer-icons-user-profile-circle-abstract-miscellaneous-rim-account-thumbnail.png' }}" alt="profile-user"
                                                          class="avatar  profile-user brround cover-image">
 												</span>
                                     <div class="text-center p-1 d-flex d-lg-none-max">
